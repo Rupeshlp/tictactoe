@@ -2,7 +2,7 @@ body {
   font-size: 15pt;
   padding: 0px;
   margin: 0px;
-  background: rgba(0, 0, 0, 0.3) url(bg15.jpg);
+  background: rgba(0, 0, 0, 0.3) url(bg/bg15.jpg);
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -182,11 +182,27 @@ body {
   background-color: transparent;
   color: white;
   font-size: 20px;
+  transition: all 0.4s ease;
+  border-radius: 4px;
 }
 
+#borderLine1{
+  width: 0px;
+  height: 3px;
+  background-image: linear-gradient(to right, #ff0062, #00ffff);
+  position: relative;
+  top: 37px;
+  transition: width 0.4s ease;
+  border-radius: 4px;
+}
 
-#form input:focus {
-  border-bottom: 3px solid #FF1F84;
+#borderLine2{
+  width: 0px;
+  height: 3px;
+  background-image: linear-gradient(to right, #FFF200, #FF0606, #06FF53);
+  position: relative;
+  top: 37px;
+  transition: width 0.4s ease;
 }
 
 ::-webkit-input-placeholder {
@@ -315,3 +331,4 @@ body {
     color: #1FFFA3;
   }
 }
+
