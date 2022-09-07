@@ -183,7 +183,6 @@ body {
   color: white;
   font-size: 20px;
   transition: all 0.4s ease;
-  border-radius: 4px;
 }
 
 #borderLine1{
@@ -203,6 +202,7 @@ body {
   position: relative;
   top: 37px;
   transition: width 0.4s ease;
+  border-radius: 4px;
 }
 
 ::-webkit-input-placeholder {
