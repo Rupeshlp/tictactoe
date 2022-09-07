@@ -240,5 +240,5 @@ reset.addEventListener('click', () => {
 setInterval(() => {
   let randomNum = Math.round(2 + (15 - 2) * Math.random());
   let body = document.body;
-  body.style.backgroundImage = `url(bg/bg${randomNum}.jpg)`;
+  body.style.backgroundImage = `url(bg${randomNum}.jpg)`;
 }, 4000);
