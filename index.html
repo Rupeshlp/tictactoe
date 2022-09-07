@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>tic tac toe</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cabin&family=Francois+One&family=Kanit:wght@100&family=Langar&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cabin&family=Francois+One&family=Kanit:wght@100&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <nav id="navication">
+    <h3>My tic tac toe</h3>
+  </nav>
+
+  <div id="container">
+    <div id="harding">
+      <h3>Welcome to</h3>
+      <h3>Tic Tac Toe Game</h3>
+    </div>
+    <div id="form">
+      <input type="text" value="" id="playerX" placeholder="Input X player name">
+      <input type="text" value="" id="player0" placeholder="Input 0 player name">
+      <button id="setName">Set Name & strat game</button>
+
+    </div>
+    <div id="info">
+      <div id="turn">
+        <h3 class="turnFor">Turn for </h3>
+      </div>
+      <div id="gameDraw">
+        <h3 class="draw">Game Draw</h3>
+      </div>
+      <div id="winImage"></div>
+    </div>
+
+
+    <div id="box-container">
+
+      <div id="underLine"></div>
+
+      <div class="box bt-0 bl-0"><span class="box-text"></span></div>
+      <div class="box bt-0"><span class="box-text"></span></div>
+      <div class="box bt-0 br-0"><span class="box-text"></span></div>
+      <div class="box bl-0"><span class="box-text"></span></div>
+      <div class="box"><span class="box-text"></span></div>
+      <div class="box br-0"><span class="box-text"></span></div>
+      <div class="box bl-0 bb-0"><span class="box-text"></span></div>
+      <div class="box bb-0"><span class="box-text"></span></div>
+      <div class="box br-0 bb-0"><span class="box-text"></span></div>
+
+    </div>
+
+    <div id="button">
+      <div id="playAgain">
+        <button type="button" id="playAgain">Play again</button>
+      </div>
+      <div id="allButton">
+        <button type="button" id="reset">Reset</button>
+      </div>
+    </div>
+
+  </div>
+
+
+  <script src="main.js"></script>
+</body>
+
+</html>

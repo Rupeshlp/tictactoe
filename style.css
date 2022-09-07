@@ -1,0 +1,317 @@
+body {
+  font-size: 15pt;
+  padding: 0px;
+  margin: 0px;
+  background: rgba(0, 0, 0, 0.3) url(bg/bg15.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-blend-mode: darken;
+  transition: all 0.6s ease-in-out;
+}
+
+#navication {
+  width: 100%;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+#navication h3 {
+  font-size: 1.9rem;
+  position: absolute;
+  top: -24px;
+  left: 5px;
+  color: #54FFE9;
+  font-family: 'Archivo Black', sans-serif;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+
+#harding {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 25px;
+  position: relative;
+}
+
+#harding h3 {
+  margin: 0px;
+  font-size: 2rem;
+  font-family: 'Archivo Black', sans-serif;
+  color: #1FFFA3;
+}
+
+
+#box-container {
+  height: auto;
+  width: 340px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  transition: all .4s ease-in-out;
+}
+
+#box-container .box {
+  height: 100px;
+  width: 100px;
+  border: 2px solid palegreen;
+  font-size: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  color: #FDFF22;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+}
+
+#box-container .bt-0 {
+  border-top: 0px;
+}
+
+#box-container .br-0 {
+  border-right: 0px;
+}
+
+#box-container .bl-0 {
+  border-left: 0px;
+}
+
+#box-container .bb-0 {
+  border-bottom: 0px;
+}
+
+
+#button {
+  width: 100%;
+  height: 50px;
+  position: relative;
+  top: 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#playAgain button {
+  width: 150px;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  background-color: #25A512;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: relative;
+}
+
+#playAgain button:hover {
+  background-color: #00E910;
+  cursor: pointer;
+}
+
+#allButton button {
+  width: 150px;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  background-color: #C72222;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 5px;
+  position: relative;
+}
+
+#allButton button:hover {
+  background-color: #FF1D1D;
+  cursor: pointer;
+}
+
+
+#form {
+  width: 100%;
+  height: auto;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#setName {
+  width: 250px;
+  height: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+  background-color: #14C51F;
+  color: white;
+  margin-top: 25px;
+}
+
+#setName:hover {
+  cursor: pointer;
+  background-color: #2EFC3C;
+}
+
+#form input {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid black;
+  margin-top: 10px;
+  background-color: transparent;
+  color: white;
+  font-size: 20px;
+}
+
+
+#form input:focus {
+  border-bottom: 3px solid #FF1F84;
+}
+
+::-webkit-input-placeholder {
+  color: #1FFFEF;
+}
+
+
+#turn .turnFor {
+  color: #06FC30;
+  font-family: 'Langar';
+  display: block;
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  padding: 5px 10px;
+  text-align: center;
+  height: 30px;
+}
+
+#gameDraw .draw {
+  color: #F8F610;
+  font-family: 'Langar';
+  display: none;
+  position: relative;
+  z-index: 1;
+}
+
+
+#underLine {
+  display: inline-block;
+  width: 0px;
+  height: 8px;
+  background-color: #08FF2D;
+  position: absolute;
+  z-index: 1;
+  transition: width 0.4s ease-in;
+  border-radius: 4px;
+}
+
+#winImage {
+  width: 0%;
+  height: 180px;
+  background-image: url(win3.gif);
+  position: absolute;
+  top: 10px;
+  z-index: 0.3;
+  background-repeat: no-repeat;
+  transition: width .4s ease-in;
+  border-radius: 8px;
+}
+
+#info {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@media only screen and (min-width: 600px) {
+  #winImage {
+    width: 0%;
+    height: 180px;
+    background-image: url(win3.gif);
+    position: absolute;
+    top: 10px;
+    left: 39vw;
+    z-index: 0.3;
+    background-repeat: no-repeat;
+    transition: width .4s ease-in;
+    border-radius: 8px;
+  }
+
+  #underLine {
+    display: inline-block;
+    width: 0px;
+    height: 8px;
+    background-color: #08FF2D;
+    position: absolute;
+    z-index: 1;
+    transition: width 0.4s ease-in;
+    border-radius: 4px;
+    transform: translate(10vw, 0vw) rotate(90deg);
+  }
+  
+  body{
+    background: rgb(0, 0, 0, 0.4) url(bg1.jpg);
+    background-size: 100% 48%;
+    background-repeat: no-repeat;
+    background-blend-mode: darken;
+    background-attachment: fixed;
+  }
+
+  #container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 44vh;
+    position: relative;
+    
+  }
+
+  /*
+#container::before{
+  content: "";
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  background-image: url(bg1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  
+} */
+
+  #harding h3 {
+    margin: 0px;
+    font-size: 2.5rem;
+    font-family: 'Archivo Black', sans-serif;
+    color: #1FFFA3;
+  }
+}
