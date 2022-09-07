@@ -145,9 +145,9 @@ setName.addEventListener('click', () => {
 
   playerX.value = "";
   player0.value = "";
-  playerX.style.display = "none";
-  player0.style.display = "none";
-  setName.style.display = "none";
+  playerX.style.display = `none`;
+  player0.style.display = `none`;
+  setName.style.display = `none`;
 
   let boxs = document.getElementsByClassName("box");
   Array.from(boxs).forEach(element => {
@@ -240,5 +240,27 @@ reset.addEventListener('click', () => {
 setInterval(() => {
   let randomNum = Math.round(2 + (15 - 2) * Math.random());
   let body = document.body;
-  body.style.backgroundImage = `url(bg${randomNum}.jpg)`;
+  body.style.backgroundImage = `url(bg/bg${randomNum}.jpg)`;
 }, 4000);
+
+
+
+
+playerX.addEventListener('focusin', ()=>{
+  let borderLine1 = document.getElementById('borderLine1');
+  borderLine1.style.width = `280px`;
+})
+playerX.addEventListener('focusout', ()=>{
+  let borderLine1 = document.getElementById('borderLine1');
+  borderLine1.style.width = `0px`;
+})
+
+player0.addEventListener('focusin', ()=>{
+  let borderLine2 = document.getElementById('borderLine2');
+  borderLine2.style.width = `280px`;
+})
+player0.addEventListener('focusout', ()=>{
+  let borderLine2 = document.getElementById('borderLine2');
+  borderLine2.style.width = `0px`;
+})
+
