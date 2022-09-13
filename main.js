@@ -12,6 +12,7 @@ let win;
 let turnfor;
 let inputName;
 let count = 0;
+let turnFor = document.getElementById('turnTo');
 
 // change turn for X and 0
 const changeTurn = () => {
@@ -61,42 +62,42 @@ const checkWin = () => {
 
       win = boxTexts[e[0]].innerText;
 
-      let winX = document.querySelector('.turnFor');
+      // let winX = document.querySelector('.turnFor');
 
       if ((player0Name === '' && playerXName === '')) {
 
-        winX.innerText = boxTexts[e[0]].innerText + ' win';
-        winX.style.color = '#17FF00';
-        winX.style.fontSize = 30 + 'px';
-        winX.style.background = "transparent";
+        turnFor.innerText = boxTexts[e[0]].innerText + ' win';
+        turnFor.style.color = 'lime';
+        turnFor.style.fontSize = 30 + 'px';
+        turnFor.style.background = "transparent";
 
       } else if (player0Name === '' && boxTexts[e[0]].innerText === "0") {
 
-        winX.innerText = '0 win';
-        winX.style.color = '#17FF00';
-        winX.style.fontSize = 30 + 'px';
-        winX.style.background = "transparent";
+        turnFor.innerText = '0 win';
+        turnFor.style.color = 'lime';
+        turnFor.style.fontSize = 30 + 'px';
+        turnFor.style.background = "transparent";
 
       } else if (playerXName === '' && boxTexts[e[0]].innerText === "X") {
 
-        winX.innerText = 'X win';
-        winX.style.color = '#17FF00';
-        winX.style.fontSize = 30 + 'px';
-        winX.style.background = "transparent";
+        turnFor.innerText = 'X win';
+        turnFor.style.color = 'lime';
+        turnFor.style.fontSize = 30 + 'px';
+        turnFor.style.background = "transparent";
 
       } else if (boxTexts[e[0]].innerText === "X") {
 
-        winX.innerText = playerXName + " win"
-        winX.style.color = '#17FF00';
-        winX.style.fontSize = 30 + 'px';
-        winX.style.background = "transparent";
+        turnFor.innerText = playerXName + " win"
+        turnFor.style.color = 'lime';
+        turnFor.style.fontSize = 30 + 'px';
+        turnFor.style.background = "transparent";
 
       } else if (boxTexts[e[0]].innerText === "0") {
 
-        winX.innerText = player0Name + " win";
-        winX.style.color = '#17FF00'
-        winX.style.fontSize = 30 + 'px';
-        winX.style.background = "transparent";
+        turnFor.innerText = player0Name + " win";
+        turnFor.style.color = 'lime'
+        turnFor.style.fontSize = 30 + 'px';
+        turnFor.style.background = "transparent";
       }
 
       let boxContainer = document.getElementById('box-container');
@@ -122,11 +123,21 @@ setName.addEventListener('click', () => {
   let playerX = document.getElementById("playerX");
   let player0 = document.getElementById("player0");
   
-
+  
   playerXName = playerX.value.toUpperCase();
   player0Name = player0.value.toUpperCase();
-
-  document.getElementsByClassName("turnFor")[0].innerText = "Turn for " + playerXName;
+  
+  
+  if (playerXName === '') {
+    
+    turnFor.innerText = `Turn for ${turn}`;
+    
+  } else {
+    turnFor.innerText = `Turn for ${playerXName}`
+  }
+  
+  
+  
 
   inputName = playerXName;
   let OName;
@@ -157,7 +168,7 @@ setName.addEventListener('click', () => {
 
       if ((count === 9) && (win === '' || win === undefined)) {
 
-        document.getElementsByClassName("turnFor")[0].style.display = 'none';
+        turnFor.style.display = 'none';
         document.getElementsByClassName("draw")[0].style.display = 'block';
 
       }
@@ -172,14 +183,16 @@ setName.addEventListener('click', () => {
           checkWin();
           inputName = turnfor();
           audioTurn.play();
+          
 
           if (!gameOver) {
 
             if (inputName == '') {
-              document.getElementsByClassName("turnFor")[0].innerText = "Turn for " + turn;
+              
+              turnFor.innerText = "Turn for " + turn;
               // audioTurn.play()
             } else {
-              document.getElementsByClassName("turnFor")[0].innerText = "Turn for " + inputName;
+              turnFor.innerText = "Turn for " + inputName;
               // audioTurn.play()
             }
           }
@@ -200,21 +213,22 @@ let playAgain = document.getElementById('playAgain');
 playAgain.addEventListener('click', () => {
   let boxText = document.querySelectorAll(".box-text");
   Array.from(boxText).forEach(element => {
-    element.innerText = "";
+    element.innerText = ""
   })
   turn = 'X';
   gameOver = false;
   inputName = playerXName;
+  turnFor.style.color = '#FD31FF'
 
   if (inputName == '') {
-    document.getElementsByClassName("turnFor")[0].innerText = "Turn for " + turn;
+    turnFor.innerText = "Turn for " + turn;
   } else {
-    document.getElementsByClassName("turnFor")[0].innerText = "Turn for " + inputName;
+    turnFor.innerText = "Turn for " + inputName;
   }
 
   document.getElementById('underLine').style.width = 0 + 'px';
 
-  document.getElementsByClassName("turnFor")[0].style.display = 'block';
+  turnFor.style.display = 'block';
   document.getElementsByClassName("draw")[0].style.display = 'none';
 
   let boxContainer = document.getElementById('box-container');
@@ -237,11 +251,11 @@ reset.addEventListener('click', () => {
 
 
 
-setInterval(() => {
-  let randomNum = Math.round(2 + (15 - 2) * Math.random());
-  let body = document.body;
-  body.style.backgroundImage = `url(bg${randomNum}.jpg)`;
-}, 4000);
+// setInterval(() => {
+  // let randomNum = Math.round(2 + (15 - 2) * Math.random());
+  // let body = document.body;
+  // body.style.backgroundImage = `url(bg/bg${randomNum}.jpg)`;
+// }, 4000);
 
 
 
@@ -263,4 +277,5 @@ player0.addEventListener('focusout', ()=>{
   let borderLine2 = document.getElementById('borderLine2');
   borderLine2.style.width = `0px`;
 })
+
 
