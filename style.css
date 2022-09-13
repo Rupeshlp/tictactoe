@@ -2,7 +2,7 @@ body {
   font-size: 15pt;
   padding: 0px;
   margin: 0px;
-  background: rgba(0, 0, 0, 0.3) url(bg15.jpg);
+  background: rgba(0, 0, 0, 0.3) url(bg/bg5.jpg);
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -22,7 +22,7 @@ body {
   position: absolute;
   top: -24px;
   left: 5px;
-  color: #54FFE9;
+  color: #fff;
   font-family: 'Archivo Black', sans-serif;
 }
 
@@ -49,7 +49,7 @@ body {
   margin: 0px;
   font-size: 2rem;
   font-family: 'Archivo Black', sans-serif;
-  color: #1FFFA3;
+  color: #fff;
 }
 
 
@@ -66,7 +66,7 @@ body {
 #box-container .box {
   height: 100px;
   width: 100px;
-  border: 2px solid palegreen;
+  border: 2px solid #fff;
   font-size: 4rem;
   display: flex;
   flex-wrap: wrap;
@@ -74,7 +74,7 @@ body {
   align-items: center;
   text-align: center;
   position: relative;
-  color: #FDFF22;
+  color: #FF2121;
   cursor: pointer;
   font-family: 'Roboto', sans-serif;
 }
@@ -177,7 +177,7 @@ body {
 #form input {
   border: none;
   outline: none;
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid black;
   margin-top: 10px;
   background-color: transparent;
   color: white;
@@ -190,7 +190,7 @@ body {
   height: 3px;
   background-image: linear-gradient(to right, #ff0062, #00ffff);
   position: relative;
-  top: 37px;
+  top: 38px;
   transition: width 0.4s ease;
   border-radius: 4px;
 }
@@ -200,7 +200,7 @@ body {
   height: 3px;
   background-image: linear-gradient(to right, #FFF200, #FF0606, #06FF53);
   position: relative;
-  top: 37px;
+  top: 38px;
   transition: width 0.4s ease;
   border-radius: 4px;
 }
@@ -211,7 +211,7 @@ body {
 
 
 #turn .turnFor {
-  color: #06FC30;
+  color: #FD31FF;
   font-family: 'Langar';
   display: block;
   z-index: 1;
@@ -331,4 +331,5 @@ body {
     color: #1FFFA3;
   }
 }
+
 
