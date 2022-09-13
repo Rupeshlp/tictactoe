@@ -2,7 +2,7 @@ body {
   font-size: 15pt;
   padding: 0px;
   margin: 0px;
-  background: rgba(0, 0, 0, 0.3) url(bg/bg5.jpg);
+  background: rgba(0, 0, 0, 0.3) url(bg5.jpg);
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
